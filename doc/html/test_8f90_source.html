@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Satelite conversion: Fichero Fuente test.f90</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Satelite conversion
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Convierte ascii files from ESRI and TOMS to Grads</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">test.f90</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="test_8f90.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="test_8f90.html#a9b25640dcd682d50a16889ca355954bb">    1</a></span>&#160;<span class="keyword">program</span> <a class="code" href="test_8f90.html#a9b25640dcd682d50a16889ca355954bb">test2</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">NAMELIST</span>/test/<a class="code" href="namespacevariables.html#a53170c686557854aa83a2bc301aeee75">cfile</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keywordtype">character (len=14)</span>,<span class="keywordtype">dimension(12)</span>:: <a class="code" href="namespacevariables.html#a53170c686557854aa83a2bc301aeee75">cfile</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">data</span> <a class="code" href="namespacevariables.html#a53170c686557854aa83a2bc301aeee75">cfile</a> / <span class="stringliteral">&#39;no2_201801.grd&#39;</span>,<span class="stringliteral">&#39;no2_201802.grd&#39;</span>,<span class="stringliteral">&#39;no2_201803.grd&#39;</span>,<span class="stringliteral">&#39;no2_201804.grd&#39;</span>,&amp;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &amp;     <span class="stringliteral">&#39;no2_201805.grd&#39;</span>,<span class="stringliteral">&#39;no2_201806.grd&#39;</span>,<span class="stringliteral">&#39;no2_201807.grd&#39;</span>,<span class="stringliteral">&#39;no2_201808.grd&#39;</span>,&amp;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  &amp;     <span class="stringliteral">&#39;no2_201809.grd&#39;</span>,<span class="stringliteral">&#39;no2_201810.grd&#39;</span>,<span class="stringliteral">&#39;no2_201811.grd&#39;</span>,<span class="stringliteral">&#39;no2_201812.grd&#39;</span>/</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">open</span> (unit=11, file=<span class="stringliteral">&#39;NMLTEST:DAT&#39;</span>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">write</span> (11,nml=test)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">end program</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atest_8f90_html_a9b25640dcd682d50a16889ca355954bb"><div class="ttname"><a href="test_8f90.html#a9b25640dcd682d50a16889ca355954bb">test2</a></div><div class="ttdeci">program test2</div><div class="ttdef"><b>Definition:</b> <a href="test_8f90_source.html#l00001">test.f90:1</a></div></div>
+<div class="ttc" id="anamespacevariables_html_a53170c686557854aa83a2bc301aeee75"><div class="ttname"><a href="namespacevariables.html#a53170c686557854aa83a2bc301aeee75">variables::cfile</a></div><div class="ttdeci">character(len=14), dimension(:), allocatable cfile</div><div class="ttdef"><b>Definition:</b> <a href="lee__satelite_8_f90_source.html#l00018">lee_satelite.F90:18</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

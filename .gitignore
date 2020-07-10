@@ -1,0 +1,7 @@
+*.log
+*.o
+*.ctl
+*.dat
+*.grd
+*.asc
+*.exe

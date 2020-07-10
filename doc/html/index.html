@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Satelite conversion: Converts Satellite ascii to GrADs binary</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Satelite conversion
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Converts ascii files from ESRI and TOMS to Grads binary</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Converts Satellite ascii to GrADs binary </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Converts ascii data from ESRI or TOMS data into GrADs binary format and creates the descriptio file <em>ctl</em></p>
+<p>input files: </p><pre class="fragment">  TOMS or ESRI  ! ascii file
+</pre><p>From ESRI: </p><pre class="fragment">no2_201801.grd   no2_201802.grd   no2_201803.grd   no2_201804.grd
+no2_201805.grd   no2_201806.grd   no2_201807.grd   no2_201808.grd   
+no2_201809.grd   no2_201810.grd   no2_201811.grd   no2_201812.grd        
+</pre><p>From TOMS </p><pre class="fragment"> no2_201802.asc  no2_201803.asc  no2_201804.asc  no2_201805.asc 
+ no2_201806.asc  no2_201807.asc  no2_201808.asc  no2_201809.asc
+ no2_201810.asc  no2_201811.asc  no2_201812.asc  no2_201901.asc
+</pre><p>output files:</p>
+<p>data files on binary format and description file</p>
+<p>From ESRI: </p><pre class="fragment">omi_no2_2018.dat   omi_no2_2018.ctl
+</pre><p>From TOMS </p><pre class="fragment">tropomi_no2_2018.dat  tropomi_no2_2018.ctl 
+</pre><h2><a class="anchor" id="autotoc_md1"></a>
+ESRI format</h2>
+<pre class="fragment">  ncols 2880
+  nrows 1440
+  xllcorner -180.0
+  yllcorner  -90.0
+  cellsize 0.125
+  nodata_value -999
+  version 2.0
+  -999 -999 -999 -999 -999 -999 ...
+</pre><h2><a class="anchor" id="autotoc_md2"></a>
+TOMS format</h2>
+<pre class="fragment">TROPOMI monthly-mean tropospheric NO2 columns, version 1.0
+Year 2018 Month  2, units: 1e13 molecules/cm2, undef=-999
+Longitudes:  2880 bins centered on 179.9375 W to 179.9375 E  (0.125 degree steps)
+Latitudes :  1440 bins centered on  89.9375 S to  89.9375 N  (0.125 degree steps)
+lat=  -89.9375
+3   1   0   2   3   7   7   7   2  10   3   2   4   4   6   0   3   3   3   2
+</pre><h1><a class="anchor" id="autotoc_md3"></a>
+Namelist file</h1>
+<p>Se emplea el archivo <code>satelite.nml</code> para definir el formato y las variables a usar con el progama <code>convierte.exe</code> el formato que tiene es el siguiente:</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+ESRI format</h2>
+<pre class="fragment">!
+!   Namelist file for satelite extraction data
+!
+&amp;formato_ascii  ! TOMS or ESRI
+ascii="ESRI"
+! Numero de archivos
+num_files= 12
+/
+&amp;archivos
+cfile="no2_201801.grd","no2_201802.grd","no2_201803.grd","no2_201804.grd","no2_201805.grd","no2_201806.grd","no2_201807.grd","no2_201808.grd","no2_201809.grd","no2_201810.grd","no2_201811.grd","no2_201812.grd",
+/
+</pre><h2><a class="anchor" id="autotoc_md5"></a>
+TOMS format</h2>
+<pre class="fragment">!
+!   Namelist file for satelite extraction data
+!
+&amp;formato_ascii  ! TOMS or ESRI
+ascii="TOMS"
+! Numero de archivos
+num_files= 12
+/
+&amp;archivos
+cfile='no2_201901.asc','no2_201802.asc','no2_201803.asc','no2_201804.asc','no2_201805.asc','no2_201806.asc','no2_201807.asc','no2_201808.asc','no2_201809.asc','no2_201810.asc','no2_201811.asc','no2_201812.asc'
+/
+</pre> </div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

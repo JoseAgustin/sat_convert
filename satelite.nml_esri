@@ -1,0 +1,13 @@
+!
+!   Namelist file for satelite extraction data
+!
+&formato_ascii  ! TOMS or ESRI
+ascii="ESRI"
+! Numero de archivos
+num_files= 12
+/
+
+&archivos
+cfile = "no2_201801.grd","no2_201802.grd","no2_201803.grd","no2_201804.grd","no2_201805.grd","no2_201806.grd","no2_201807.grd","no2_201808.grd","no2_201809.grd","no2_201810.grd","no2_201811.grd","no2_201812.grd",
+/
+! cfile='no2_201901.asc','no2_201802.asc','no2_201803.asc','no2_201804.asc','no2_201805.asc','no2_201806.asc','no2_201807.asc','no2_201808.asc','no2_201809.asc','no2_201810.asc','no2_201811.asc','no2_201812.asc',

@@ -1,0 +1,76 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ Converts ascii data from E\+S\+RI or T\+O\+MS data into Gr\+A\+Ds binary format and creates the descriptio file {\itshape ctl}
+
+input files\+: \begin{DoxyVerb}  TOMS or ESRI  ! ascii file
+\end{DoxyVerb}
+
+
+From E\+S\+RI\+: \begin{DoxyVerb}no2_201801.grd   no2_201802.grd   no2_201803.grd   no2_201804.grd
+no2_201805.grd   no2_201806.grd   no2_201807.grd   no2_201808.grd   
+no2_201809.grd   no2_201810.grd   no2_201811.grd   no2_201812.grd        
+\end{DoxyVerb}
+
+
+From T\+O\+MS \begin{DoxyVerb} no2_201802.asc  no2_201803.asc  no2_201804.asc  no2_201805.asc 
+ no2_201806.asc  no2_201807.asc  no2_201808.asc  no2_201809.asc
+ no2_201810.asc  no2_201811.asc  no2_201812.asc  no2_201901.asc
+\end{DoxyVerb}
+
+
+output files\+:
+
+data files on binary format and description file
+
+From E\+S\+RI\+: \begin{DoxyVerb}omi_no2_2018.dat   omi_no2_2018.ctl
+\end{DoxyVerb}
+
+
+From T\+O\+MS \begin{DoxyVerb}tropomi_no2_2018.dat  tropomi_no2_2018.ctl 
+\end{DoxyVerb}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{E\+S\+R\+I format}\label{index_autotoc_md1}
+\begin{DoxyVerb}  ncols 2880
+  nrows 1440
+  xllcorner -180.0
+  yllcorner  -90.0
+  cellsize 0.125
+  nodata_value -999
+  version 2.0
+  -999 -999 -999 -999 -999 -999 ...
+\end{DoxyVerb}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{T\+O\+M\+S format}\label{index_autotoc_md2}
+\begin{DoxyVerb}TROPOMI monthly-mean tropospheric NO2 columns, version 1.0
+Year 2018 Month  2, units: 1e13 molecules/cm2, undef=-999
+Longitudes:  2880 bins centered on 179.9375 W to 179.9375 E  (0.125 degree steps)
+Latitudes :  1440 bins centered on  89.9375 S to  89.9375 N  (0.125 degree steps)
+lat=  -89.9375
+3   1   0   2   3   7   7   7   2  10   3   2   4   4   6   0   3   3   3   2
+\end{DoxyVerb}
+\hypertarget{index_autotoc_md3}{}\doxysection{Namelist file}\label{index_autotoc_md3}
+Se emplea el archivo {\ttfamily satelite.\+nml} para definir el formato y las variables a usar con el progama {\ttfamily convierte.\+exe} el formato que tiene es el siguiente\+:\hypertarget{index_autotoc_md4}{}\doxysubsection{E\+S\+R\+I format}\label{index_autotoc_md4}
+\begin{DoxyVerb}!
+!   Namelist file for satelite extraction data
+!
+&formato_ascii  ! TOMS or ESRI
+ascii="ESRI"
+! Numero de archivos
+num_files= 12
+/
+&archivos
+cfile="no2_201801.grd","no2_201802.grd","no2_201803.grd","no2_201804.grd","no2_201805.grd","no2_201806.grd","no2_201807.grd","no2_201808.grd","no2_201809.grd","no2_201810.grd","no2_201811.grd","no2_201812.grd",
+/
+\end{DoxyVerb}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{T\+O\+M\+S format}\label{index_autotoc_md5}
+\begin{DoxyVerb}!
+!   Namelist file for satelite extraction data
+!
+&formato_ascii  ! TOMS or ESRI
+ascii="TOMS"
+! Numero de archivos
+num_files= 12
+/
+&archivos
+cfile='no2_201901.asc','no2_201802.asc','no2_201803.asc','no2_201804.asc','no2_201805.asc','no2_201806.asc','no2_201807.asc','no2_201808.asc','no2_201809.asc','no2_201810.asc','no2_201811.asc','no2_201812.asc'
+/
+\end{DoxyVerb}
+ 

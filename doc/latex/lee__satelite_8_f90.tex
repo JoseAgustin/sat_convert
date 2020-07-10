@@ -1,0 +1,181 @@
+\hypertarget{lee__satelite_8_f90}{}\doxysection{Referencia del Archivo lee\+\_\+satelite.\+F90}
+\label{lee__satelite_8_f90}\index{lee\_satelite.F90@{lee\_satelite.F90}}
+\doxysubsection*{Módulos}
+\begin{DoxyCompactItemize}
+\item 
+module \mbox{\hyperlink{namespacevariables}{variables}}
+\begin{DoxyCompactList}\small\item\em Variables definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones/\+Subprogramas}
+\begin{DoxyCompactItemize}
+\item 
+program \mbox{\hyperlink{lee__satelite_8_f90_a67deba1f08013934fe2c83a256fde97c}{lee\+\_\+satelite}}
+\begin{DoxyCompactList}\small\item\em Conversion program from E\+S\+RI or T\+O\+MS grid format to Gr\+A\+Ds binary Create output file and write results in binary file and descriptor file. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{lee__satelite_8_f90_ab637f6a5eee6b5e3ccf5d83e29194a76}{procesa}}
+\begin{DoxyCompactList}\small\item\em Lee ascii y los guarda en binario para Gr\+A\+Ds. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{lee__satelite_8_f90_ad1a7659e94969e691d9bb626b0c2e9f1}{lee\+\_\+namelist}}
+\begin{DoxyCompactList}\small\item\em Lee archivo namelist satelite.\+nml y asigna los valores. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{lee__satelite_8_f90_a3387e3429ea648aafd8495b0656d6115}{crea\+\_\+ctl}}
+\begin{DoxyCompactList}\small\item\em Crea el archivo descriptor de Gr\+A\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter \mbox{\hyperlink{namespacevariables_a454717024d3cd1ea42ca4c0bc0b3f3aa}{variables\+::number\+\_\+lon}} =2880
+\item 
+integer, parameter \mbox{\hyperlink{namespacevariables_a73a237e03010cd062b6757fb10c6c04a}{variables\+::number\+\_\+lat}} =1440
+\item 
+integer \mbox{\hyperlink{namespacevariables_a94f91deeeaabfca3cbb1bafbf738020d}{variables\+::num\+\_\+files}}
+\item 
+real(4), dimension(number\+\_\+lon, number\+\_\+lat) \mbox{\hyperlink{namespacevariables_a20bc4d0d697dbea635d673614a3b3c07}{variables\+::no2\+\_\+column}}
+\item 
+integer, dimension(number\+\_\+lon, number\+\_\+lat) \mbox{\hyperlink{namespacevariables_abe2af7506cebbc7305704c90781dc257}{variables\+::ino2\+\_\+column}}
+\item 
+character(len=14), dimension(\+:), allocatable \mbox{\hyperlink{namespacevariables_a53170c686557854aa83a2bc301aeee75}{variables\+::cfile}}
+\item 
+character(len=4) \mbox{\hyperlink{namespacevariables_ac35b9ceea854fce1b624efac7d254d18}{variables\+::ascii}}
+\item 
+real(4) \mbox{\hyperlink{namespacevariables_a8ec6cc00bbf98ee1f485076392b6518f}{variables\+::lon\+\_\+origin}} =-\/179.\+87500\+\_\+4
+\item 
+real(4) \mbox{\hyperlink{namespacevariables_a736940218b0f0f695980d9c54e30462a}{variables\+::lat\+\_\+origin}} = -\/89.\+87500\+\_\+4
+\item 
+real(4) \mbox{\hyperlink{namespacevariables_a55f301a7dc98f2aff04af688b5f6914d}{variables\+::cell\+\_\+dim}} =0.\+125\+\_\+4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de Funciones/\+Subprogramas}
+\mbox{\Hypertarget{lee__satelite_8_f90_a3387e3429ea648aafd8495b0656d6115}\label{lee__satelite_8_f90_a3387e3429ea648aafd8495b0656d6115}} 
+\index{lee\_satelite.F90@{lee\_satelite.F90}!crea\_ctl@{crea\_ctl}}
+\index{crea\_ctl@{crea\_ctl}!lee\_satelite.F90@{lee\_satelite.F90}}
+\doxysubsubsection{\texorpdfstring{crea\_ctl()}{crea\_ctl()}}
+{\footnotesize\ttfamily subroutine lee\+\_\+satelite\+::crea\+\_\+ctl}
+
+
+
+Crea el archivo descriptor de Gr\+A\+Ds. 
+
+\begin{DoxyAuthor}{Autor}
+Jose Agustin Garcia Reynoso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+07/09/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Universidad Nacional Autonoma de Mexico. 
+\end{DoxyCopyright}
+
+\begin{DoxyParams}{Parámetros}
+{\em name\+\_\+ctl\+\_\+file} & Nombre archivo C\+TL \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 163 del archivo lee\+\_\+satelite.\+F90.
+
+\mbox{\Hypertarget{lee__satelite_8_f90_ad1a7659e94969e691d9bb626b0c2e9f1}\label{lee__satelite_8_f90_ad1a7659e94969e691d9bb626b0c2e9f1}} 
+\index{lee\_satelite.F90@{lee\_satelite.F90}!lee\_namelist@{lee\_namelist}}
+\index{lee\_namelist@{lee\_namelist}!lee\_satelite.F90@{lee\_satelite.F90}}
+\doxysubsubsection{\texorpdfstring{lee\_namelist()}{lee\_namelist()}}
+{\footnotesize\ttfamily subroutine lee\+\_\+satelite\+::lee\+\_\+namelist}
+
+
+
+Lee archivo namelist satelite.\+nml y asigna los valores. 
+
+\begin{DoxyAuthor}{Autor}
+Jose Agustin Garcia Reynoso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+07/09/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Universidad Nacional Autonoma de Mexico. 
+\end{DoxyCopyright}
+
+\begin{DoxyParams}{Parámetros}
+{\em ascii} & formato de los datos T\+O\+MS o E\+S\+RI \\
+\hline
+{\em num\+\_\+files} & Numero de archvios con promedios mensuales \\
+\hline
+{\em cfile} & file names array \\
+\hline
+{\em unit\+\_\+nml} & unidad del archivo namelist \\
+\hline
+{\em existe} & boolena para saber si existe o no el satelite.\+nml \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 128 del archivo lee\+\_\+satelite.\+F90.
+
+\mbox{\Hypertarget{lee__satelite_8_f90_a67deba1f08013934fe2c83a256fde97c}\label{lee__satelite_8_f90_a67deba1f08013934fe2c83a256fde97c}} 
+\index{lee\_satelite.F90@{lee\_satelite.F90}!lee\_satelite@{lee\_satelite}}
+\index{lee\_satelite@{lee\_satelite}!lee\_satelite.F90@{lee\_satelite.F90}}
+\doxysubsubsection{\texorpdfstring{lee\_satelite()}{lee\_satelite()}}
+{\footnotesize\ttfamily program lee\+\_\+satelite}
+
+
+
+Conversion program from E\+S\+RI or T\+O\+MS grid format to Gr\+A\+Ds binary Create output file and write results in binary file and descriptor file. 
+
+\begin{DoxyAuthor}{Autor}
+Jose Agustin Garcia Reynoso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+07/09/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Universidad Nacional Autonoma de Mexico. 
+\end{DoxyCopyright}
+
+
+Definición en la línea 34 del archivo lee\+\_\+satelite.\+F90.
+
+\mbox{\Hypertarget{lee__satelite_8_f90_ab637f6a5eee6b5e3ccf5d83e29194a76}\label{lee__satelite_8_f90_ab637f6a5eee6b5e3ccf5d83e29194a76}} 
+\index{lee\_satelite.F90@{lee\_satelite.F90}!procesa@{procesa}}
+\index{procesa@{procesa}!lee\_satelite.F90@{lee\_satelite.F90}}
+\doxysubsubsection{\texorpdfstring{procesa()}{procesa()}}
+{\footnotesize\ttfamily subroutine lee\+\_\+satelite\+::procesa}
+
+
+
+Lee ascii y los guarda en binario para Gr\+A\+Ds. 
+
+\begin{DoxyAuthor}{Autor}
+Jose Agustin Garcia Reynoso 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+07/09/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Universidad Nacional Autonoma de Mexico. 
+\end{DoxyCopyright}
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & counter for number\+\_\+lon values \\
+\hline
+{\em j} & counter for number\+\_\+lat values \\
+\hline
+{\em irec} & record counter \\
+\hline
+{\em itim} & time counter for files File\+\_\+num \\
+\hline
+{\em cdum} & character dummy variable \\
+\hline
+{\em satelite\+\_\+name} & nombre del formato ascii del satelite \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 57 del archivo lee\+\_\+satelite.\+F90.
+

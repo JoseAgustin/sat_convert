@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Satelite conversion: Referencia del Archivo lee_NO2_ESRI.f90</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Satelite conversion
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Converts ascii files from ESRI and TOMS to Grads binary</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones/Subprogramas</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo lee_NO2_ESRI.f90</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="lee___n_o2___e_s_r_i_8f90_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones/Subprogramas</h2></td></tr>
+<tr class="memitem:abe87bfd65db553d52cc553fb32dd98ec"><td class="memItemLeft" align="right" valign="top">program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lee___n_o2___e_s_r_i_8f90.html#abe87bfd65db553d52cc553fb32dd98ec">lee_esri</a></td></tr>
+<tr class="memdesc:abe87bfd65db553d52cc553fb32dd98ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion program from ESRI grid format to GrADs binary Create output file and write results in binary file and descriptor file.  <a href="lee___n_o2___e_s_r_i_8f90.html#abe87bfd65db553d52cc553fb32dd98ec">Más...</a><br /></td></tr>
+<tr class="separator:abe87bfd65db553d52cc553fb32dd98ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de Funciones/Subprogramas</h2>
+<a id="abe87bfd65db553d52cc553fb32dd98ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe87bfd65db553d52cc553fb32dd98ec">&#9670;&nbsp;</a></span>lee_esri()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">program lee_esri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Conversion program from ESRI grid format to GrADs binary Create output file and write results in binary file and descriptor file. </p>
+<dl class="section author"><dt>Autor</dt><dd>Jose Agustin Garcia Reynoso </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>06/26/2020 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Universidad Nacional Autonoma de Mexico. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variable</td><td>array with colum data </td></tr>
+    <tr><td class="paramname">cfile</td><td>file names array </td></tr>
+    <tr><td class="paramname">i</td><td>counter for col_number values </td></tr>
+    <tr><td class="paramname">j</td><td>counter for row_number values </td></tr>
+    <tr><td class="paramname">irec</td><td>record counter </td></tr>
+    <tr><td class="paramname">itim</td><td>time counter for files File_num </td></tr>
+    <tr><td class="paramname">cdum</td><td>character dummy variable </td></tr>
+    <tr><td class="paramname">col_number</td><td>Number of colums in file longitude values </td></tr>
+    <tr><td class="paramname">row_number</td><td>Number of rows in file latitude values </td></tr>
+    <tr><td class="paramname">File_num</td><td>Number of times each file has one time </td></tr>
+    <tr><td class="paramname">variable</td><td>Integer value of the NO2 column </td></tr>
+    <tr><td class="paramname">cell_dim</td><td>tamaño de la celda </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lee___n_o2___e_s_r_i_8f90_source.html#l00020">20</a> del archivo <a class="el" href="lee___n_o2___e_s_r_i_8f90_source.html">lee_NO2_ESRI.f90</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
