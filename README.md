@@ -1,6 +1,7 @@
 # Converts Satellite ascii to GrADs binary
 
-Converts ascii data from ESRI or TOMS data into GrADs binary format and creates the descriptio file _ctl_
+Converts ascii data from ESRI or TOMS data into GrADS binary format and creates the descriptio file _ctl_
+
 
 input files:
 
@@ -84,3 +85,8 @@ Se emplea el archivo `satelite.nml` para definir el formato y las variables a us
     cfile='no2_201901.asc','no2_201802.asc','no2_201803.asc','no2_201804.asc','no2_201805.asc','no2_201806.asc','no2_201807.asc','no2_201808.asc','no2_201809.asc','no2_201810.asc','no2_201811.asc','no2_201812.asc'
     /
 
+## Additional links
+
+The **ascii** data can be obtained from [TEMIS](http://www.temis.nl/index.php) web site
+
+The **GrADS** program can be downloaded from [Grads web site](http://cola.gmu.edu/grads/)
